@@ -1,0 +1,14 @@
+NOP,00000000,None
+ADD,00000001,8-bit address
+LDA,00000010,8-bit address
+LDB,00000011,8-bit address
+SUM,00000100,None
+SUB,00000101,None
+STA,00000111,8-bit address
+STB,00001000,8-bit address
+OUA,11111010,None
+OUT,11111011,8-bit value
+JMP,11111100,8-bit counter step
+JZ,11111101,8-bit counter step
+JC,11111110,8-bit counter step
+HLT,11111111,None

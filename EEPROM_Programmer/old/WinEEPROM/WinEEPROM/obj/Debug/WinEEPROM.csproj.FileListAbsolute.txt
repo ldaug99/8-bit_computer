@@ -1,0 +1,9 @@
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\bin\Debug\WinEEPROM.exe.config
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\bin\Debug\WinEEPROM.exe
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\bin\Debug\WinEEPROM.pdb
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\obj\Debug\WinEEPROM.csprojAssemblyReference.cache
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\obj\Debug\WinEEPROM.Form1.resources
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\obj\Debug\WinEEPROM.Properties.Resources.resources
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\obj\Debug\WinEEPROM.csproj.GenerateResource.cache
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\obj\Debug\WinEEPROM.exe
+F:\Git\EEPROM_Programmer\WinEEPROM\WinEEPROM\obj\Debug\WinEEPROM.pdb

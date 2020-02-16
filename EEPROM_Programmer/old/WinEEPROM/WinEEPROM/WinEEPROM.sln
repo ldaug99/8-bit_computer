@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinEEPROM", "WinEEPROM.csproj", "{EB16C31E-E5F2-40C2-8BF0-9ADF09319560}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB16C31E-E5F2-40C2-8BF0-9ADF09319560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB16C31E-E5F2-40C2-8BF0-9ADF09319560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB16C31E-E5F2-40C2-8BF0-9ADF09319560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB16C31E-E5F2-40C2-8BF0-9ADF09319560}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7480C4D0-ADEE-4F9D-8693-EA37B0E0791B}
+	EndGlobalSection
+EndGlobal
