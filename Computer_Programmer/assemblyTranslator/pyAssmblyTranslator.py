@@ -290,7 +290,7 @@ def writeProgramToHfile(translatedProgram):
         "#include <Arduino.h> \n",
         "const static uint8_t programLength = " + str(linesToProgram) + "; \n",
         "const static uint8_t lineParts = 6; \n"
-        "const PROGMEM uint8_t programData[programLength][lineParts] = { \n",
+        "const static uint8_t programData[programLength][lineParts] = { \n",
     ]
     endLine = "}; \n"
     # Add program lines
@@ -309,5 +309,5 @@ def writeProgramToHfile(translatedProgram):
 fileName = "AddSubLoop.asm", 
 directory = "8-bit_computer_programs"
 
-translatedProgram = translateFromAssembly("AddSubLoop.asm", "8-bit_computer_programs")
+translatedProgram = translateFromAssembly("simpleAddLoop.asm", "8-bit_computer_programs")
 writeProgramToHfile(translatedProgram)

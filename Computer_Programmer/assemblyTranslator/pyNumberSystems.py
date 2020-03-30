@@ -70,3 +70,13 @@ def strHexToDec(strHex):
 def strDecToDec(strDec):
     # Convert string decimal to decimal
     return int(strDec)
+
+def strArrayBinToDec(arrayBin, invert = False):
+    # Convert an string array of binary numbers to a decimal number 
+    forRange = range(0, len(arrayBin))
+    if invert:
+        forRange = range(len(arrayBin) - 1, 0, -1)
+    strBin = ""
+    for i in forRange:
+        strBin = strBin + arrayBin[i - 1] 
+    return strBinToDec(strBin)

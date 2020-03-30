@@ -4,7 +4,7 @@
 #include "serialEEPROMwriter.h"
 //************************************************************************************
 // Global variables
-uint32_t baudRate = 250000;
+uint32_t baudRate = 115200;
 //************************************************************************************
 // Initialize instance
 serialEEPROMwriter prom;

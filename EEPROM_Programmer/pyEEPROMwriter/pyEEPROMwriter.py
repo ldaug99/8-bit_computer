@@ -53,11 +53,11 @@ class pyEEPROM():
             if check != None:
                 failedToWrite.append(address[i])
         failedVerification = []
-        for i in range(0, len(address)):
-            print("Validating entry {} of {} entries...".format(i + 1, len(address)))
-            check = self.__validateAddress(self.__com, address[i], data[i])
-            if check != None:
-                failedVerification.append(address[i])
+        # for i in range(0, len(address)):
+        #     print("Validating entry {} of {} entries...".format(i + 1, len(address)))
+        #     check = self.__validateAddress(self.__com, address[i], data[i])
+        #     if check != None:
+        #         failedVerification.append(address[i])
         return failedToWrite, failedVerification
 
     def __writeAddress(self, com, address, data):
@@ -74,6 +74,7 @@ class pyEEPROM():
             return address
 
     def __validateAddress(self, com, address, expdata):
+        com.flush()
         print("Validating address {} with expected data {}... ".format(address, expdata), end = '')
         output = str(address)
         com.write(output.encode())

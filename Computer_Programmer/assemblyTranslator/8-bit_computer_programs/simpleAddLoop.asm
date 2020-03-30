@@ -15,8 +15,3 @@ section .text ; Main program section
         SUM
         OUA
         JMP sumLoop
-
-
-
-
- 

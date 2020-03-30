@@ -93,7 +93,7 @@ void startProg() {
 // Setup pinout
 void setupPinout() {
   #ifdef waitForPress
-    pinMode(A0, INPUT_PULLUP);
+    pinMode(A0, INPUT);
   #endif
   // Serial out
   pinMode(SO, OUTPUT);
@@ -145,6 +145,8 @@ uint8_t getRamLocation(uint8_t ramType) {
       return 1; // Save to data memory
     } else { // Invalid type...
       for (;;) {
+        Serial.println("Invalid type");
+        delay(1000);
         // Imma stop you right there...
       }
     }
@@ -158,16 +160,17 @@ void pulseClock() {
 // Set data and control
 void shiftOutAndSet(uint8_t data, uint8_t control) {
   // Shift out data
-  // Serial.print("Setting data. BIN: ");
-  // Serial.print(data, BIN);
-  // Serial.print(" HEX: ");
-  // Serial.println(data, HEX);
+  Serial.print("Setting data. BIN: ");
+  Serial.print(data, BIN);
+  Serial.print(" HEX: ");
+  Serial.println(data, HEX);
   shiftOut(SO, SC, MSBFIRST, control); // Control signal
   shiftOut(SO, SC, MSBFIRST, data); // Bus data
   #ifdef waitForPress
-    while(digitalRead(A0) == HIGH) {}
+    while (digitalRead(A0) == HIGH)) {}
+    delay(200);
   #endif
-  delay(500);
+  delay(100);
   // Pulse clock
   pulseClock();
 }
@@ -208,6 +211,7 @@ void programComputer() {
   for (uint8_t i = 0; i < programLength; i++) {
     printLine(i);
     for (uint8_t k = 0; k < lineSteps; k++) {
+      Serial.println(programData[i][0]);
       shiftOutAndSet(programData[i][1 + k], controlLines[getRamLocation(programData[i][0])][k]);
       delay(25);
     }
@@ -225,14 +229,15 @@ void setup() {
 // Main loop
 void loop() {
   if (doProgram) {
-    Serial.println("Starting programming computer. Read to receive data.");
+    Serial.println("Starting programming computer...");
     haltComputer();
     programComputer();
-    doProgram = false;
     startComputer();
     delay(100);
+    while(digitalRead(PROG) == HIGH) {}
     attachInterrupt(digitalPinToInterrupt(PROG), startProg, RISING);
     Serial.println("Done programming computer");
+    doProgram = false;
   }
 }
 //************************************************************************************
